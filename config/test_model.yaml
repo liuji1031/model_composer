@@ -1,0 +1,52 @@
+name: test_model
+skip_build: true
+modules:
+  - name: entry
+    inp_src:
+      - x
+      - y
+      - z
+      - batch
+
+  - name: module1
+    cls: network1
+    inp_src:
+      - x
+      - y
+      - z
+      - batch
+    out_num: 2
+
+  - name: module2
+    cls: network2
+    inp_src:
+      - module1.0
+      - y
+      - z
+      - batch
+  
+  - name: module3
+    cls: network3
+    inp_src:
+      - module1.1
+      - z
+      - batch
+
+  - name: module4
+    cls: network4
+    inp_src:
+      - module2
+      - module3
+
+  - name: module5
+    cls: network5
+    inp_src:
+      - module4
+
+  - name: exit
+    inp_src:
+      out0: module1.1
+      out1: module4
+      out3: module2
+      out4: module5
+      out5: module3

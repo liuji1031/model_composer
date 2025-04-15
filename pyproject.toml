@@ -1,0 +1,24 @@
+[project]
+name = "model-composer"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ji Liu", email = "liuji1031@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "loguru>=0.7.3",
+    "numpy>=2.2.4",
+    "omegaconf>=2.3.0",
+    "pathlib>=1.0.1",
+    "pyyaml>=6.0.2",
+    "torch>=2.6.0",
+]
+
+[project.scripts]
+model-composer = "model_composer:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
