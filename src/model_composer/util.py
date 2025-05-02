@@ -24,5 +24,16 @@ def read_config(path: str | Path) -> DictConfig:
     with open(path, "r") as file:
         d = OmegaConf.load(file)
         OmegaConf.resolve(d)
-    return d
 
+    # recursively resolve if any "config" field is referring to another config
+    # file
+    if "modules" in d:
+        for module_name, module_info in d["modules"].items():
+            if "config" in module_info and isinstance(module_info["config"], str):
+                # assume the referred config path is relative to the current
+                # config file
+                module_info["config"] = read_config(
+                    path.parent / module_info["config"]
+                )
+
+    return d
