@@ -1,5 +1,4 @@
 import torch
-from pathlib import Path
 from loguru import logger
 from omegaconf import DictConfig, ListConfig
 from model_composer.registery import ModuleRegistry
@@ -42,10 +41,10 @@ class ComposableModel(torch.nn.Module):
             module_list (list or ListConfig): list of configuration dictionary for each module
         """
         all_names = list(module_dict.keys())
-        assert "entry" in all_names, (
-            "'entry' module not found in the config file"
+        assert "input" in all_names, (
+            "'input' module not found in the config file"
         )
-        assert "exit" in all_names, "'exit' module not found in the config file"
+        assert "output" in all_names, "'output' module not found in the config file"
 
         for module_name, module_config in module_dict.items():
             self._build_module(module_name, module_config)
@@ -77,10 +76,10 @@ class ComposableModel(torch.nn.Module):
         Args:
             module_config (dict): configuration dictionary for a single module
         """
-        print(f"Building module {module_name}")
+        print(f"Building module {self.name}.{module_name}")
         self._inp_src[module_name] = {}
 
-        if module_name not in ["entry", "exit"] and not self._skip_build:
+        if module_name not in ["input", "output"] and not self._skip_build:
             # build the module
             assert "cls" in module_config, (
                 "'cls' field not found in the module config file"
@@ -103,7 +102,7 @@ class ComposableModel(torch.nn.Module):
             self.register_module(module_name, module)
 
         # parse and validate input source variables
-        if module_name in ["entry", "exit"]:
+        if module_name in ["input", "output"]:
             inp_src = module_config # directly specified in the config
         else:
             inp_src = module_config["inp_src"]
@@ -118,19 +117,19 @@ class ComposableModel(torch.nn.Module):
 
         self._inp_num[module_name] = len(self._inp_src[module_name])
 
-        if module_name not in ["entry", "exit"]:
+        if module_name not in ["input", "output"]:
             self._out_num[module_name] = module_config.get("out_num", 1)
         else:
-            # entry and exit modules have no output
+            # input and output modules have no output
             self._out_num[module_name] = len(self._inp_src[module_name])
 
         # construct all output arg names
-        if module_name == "entry":
-            # entry module takes input from positional arguments
+        if module_name == "input":
+            # input module takes input from positional arguments
             self._out_varname[module_name] = self._inp_src[module_name]
         else:
             if isinstance(self._inp_src[module_name], (dict, DictConfig)):
-                # exit module takes input from a dictionary
+                # output module takes input from a dictionary
                 self._out_varname[module_name] = list(
                     self._inp_src[module_name].keys()
                 )
@@ -146,15 +145,15 @@ class ComposableModel(torch.nn.Module):
                         for i in range(self._out_num[module_name])
                     ]
 
-        if module_name not in ["entry", "exit"]:
+        if module_name not in ["input", "output"]:
             for iarg, src in enumerate(self._inp_src[module_name]):
                 # create the list of destinations for each source
                 if src not in self._des:
                     self._des[src] = []
                 self._des[src].append(f"{module_name}.input.{iarg}")
 
-        if module_name == "exit" and isinstance(
-            self._inp_src["exit"], (dict, DictConfig)
+        if module_name == "output" and isinstance(
+            self._inp_src["output"], (dict, DictConfig)
         ):
             self._return_dict = True
 
@@ -166,8 +165,8 @@ class ComposableModel(torch.nn.Module):
         for module_name in self._inp_src.keys():
             inp_cntr[module_name] = 0
 
-        # queue of modules to be processed, start with entry
-        q = ["entry"]
+        # queue of modules to be processed, start with input
+        q = ["input"]
         while len(q) > 0:
             module_name = q.pop(0)
             out_varname = self._out_varname[module_name]
@@ -187,12 +186,12 @@ class ComposableModel(torch.nn.Module):
                         # all inputs are ready, add module to queue
                         q.append(des_module_name)
 
-            if module_name not in ["entry", "exit"]:
+            if module_name not in ["input", "output"]:
                 op_seq.append(module_name)  # add module to the sequence
 
         return op_seq
 
-    def forward(self, *args):
+    def forward(self, *args, print_output_shape:bool=False):
         """Forward pass of the model.
 
         Args:
@@ -202,12 +201,12 @@ class ComposableModel(torch.nn.Module):
             torch.Tensor: output tensor
         """
         module_output = {}
-        assert len(args) == self._inp_num["entry"], (
+        assert len(args) == self._inp_num["input"], (
             f"Number of input arguments {len(args)} does not match the number of "
-            f"input sources {self._inp_num['entry']} for entry module"
+            f"input sources {self._inp_num['input']} for input module"
         )
-        for iarg, arg_name in enumerate(self._out_varname["entry"]):
-            # entry module takes input from positional arguments
+        for iarg, arg_name in enumerate(self._out_varname["input"]):
+            # input module takes input from positional arguments
             module_output[arg_name] = args[iarg]
 
         for module_name in self._op_seq:
@@ -225,22 +224,23 @@ class ComposableModel(torch.nn.Module):
             if not isinstance(out, tuple):
                 out = (out,)
 
-            assert len(out) == self._out_num[module_name], (
-                f"Number of output arguments {len(out)} does not match the number of "
-                f"output sources {self._out_num[module_name]} defined for module {module_name}"
-            )
+            if print_output_shape:
+                logger.info(
+                    f"Module {module_name} output shape: {[o.shape for o in out]}"
+                )
+
             for varname, out_val in zip(self._out_varname[module_name], out):
                 module_output[varname] = out_val
 
         if self._return_dict:
             final_output = {}
-            for des, src in self._inp_src["exit"].items():
+            for des, src in self._inp_src["output"].items():
                 # inp_src is a dict
                 final_output[des] = module_output[src]
             return final_output
         else:
             final_output = []
-            for src in self._inp_src["exit"]:
+            for src in self._inp_src["output"]:
                 final_output.append(module_output[src])
             if len(final_output) == 1:
                 return final_output[0]
