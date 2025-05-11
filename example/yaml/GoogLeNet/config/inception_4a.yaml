@@ -1,0 +1,91 @@
+name: inception_4a
+hyper_params:
+  in_channels: 480
+  n_filter_conv1x1: 192
+  n_filter_3x3reduce: 96
+  n_filter_3x3: 208
+  n_filter_5x5reduce: 16
+  n_filter_5x5: 48
+  n_filter_pool_proj: 64
+modules:
+  input:
+  - x
+  conv1x1_3x3reduce:
+    cls: Conv2d
+    config:
+      in_channels: ${hyper_params.in_channels}
+      out_channels: ${hyper_params.n_filter_3x3reduce}
+      kernel_size: 1
+      stride: 1
+      padding: 0
+    inp_src:
+    - x
+  conv1x1_5x5reduce:
+    cls: Conv2d
+    config:
+      in_channels: ${hyper_params.in_channels}
+      out_channels: ${hyper_params.n_filter_5x5reduce}
+      kernel_size: 1
+      stride: 1
+      padding: 0
+    inp_src:
+    - x
+  maxpool:
+    cls: torch.nn.MaxPool2d
+    config:
+      kernel_size: 3
+      stride: 1
+      padding: 1
+    inp_src:
+    - x
+  conv1x1:
+    cls: Conv2d
+    config:
+      in_channels: ${hyper_params.in_channels}
+      out_channels: ${hyper_params.n_filter_conv1x1}
+      kernel_size: 1
+      stride: 1
+      padding: 0
+    inp_src:
+    - x
+  conv3x3:
+    cls: Conv2d
+    config:
+      in_channels: ${modules.conv1x1_3x3reduce.config.out_channels}
+      out_channels: ${hyper_params.n_filter_3x3}
+      kernel_size: 3
+      stride: 1
+      padding: 1
+    inp_src:
+    - conv1x1_3x3reduce
+  conv5x5:
+    cls: Conv2d
+    config:
+      in_channels: ${modules.conv1x1_5x5reduce.config.out_channels}
+      out_channels: ${hyper_params.n_filter_5x5}
+      kernel_size: 5
+      stride: 1
+      padding: 2
+    inp_src:
+    - conv1x1_5x5reduce
+  conv1x1_pool_proj:
+    cls: Conv2d
+    config:
+      in_channels: ${hyper_params.in_channels}
+      out_channels: ${hyper_params.n_filter_pool_proj}
+      kernel_size: 1
+      stride: 1
+      padding: 0
+    inp_src:
+    - maxpool
+  concat:
+    cls: DepthConcat
+    config:
+      dim: 1
+    inp_src:
+    - conv1x1
+    - conv3x3
+    - conv5x5
+    - conv1x1_pool_proj
+  output:
+  - concat

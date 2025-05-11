@@ -1,0 +1,159 @@
+name: GoogLeNet
+modules:
+  input:
+    - x
+  convolution_1:
+    cls: Conv2d
+    config:
+      in_channels: 3
+      out_channels: 64
+      kernel_size: 7
+      stride: 2
+      padding: 3
+    inp_src:
+      - x
+  maxpool_1:
+    cls: torch.nn.MaxPool2d
+    config:
+      kernel_size: 3
+      stride: 2
+      padding: 1
+    inp_src:
+      - convolution_1
+  convolution_2_reduce:
+    cls: Conv2d
+    config:
+      in_channels: 64
+      out_channels: 64
+      kernel_size: 1
+      stride: 1
+      padding: 0
+    inp_src:
+      - maxpool_1
+  convolution_2:
+    cls: Conv2d
+    config:
+      in_channels: 64
+      out_channels: 192
+      kernel_size: 3
+      stride: 1
+      padding: 1
+    inp_src:
+      - convolution_2_reduce
+  maxpool_2:
+    cls: torch.nn.MaxPool2d
+    config:
+      kernel_size: 3
+      stride: 2
+      padding: 1
+    inp_src:
+      - convolution_2
+  inception_3a:
+    cls: ComposableModel
+    config: config/inception_3a.yaml
+    inp_src:
+      - maxpool_2
+  inception_3b:
+    cls: ComposableModel
+    config: config/inception_3b.yaml
+    inp_src:
+      - inception_3a
+  maxpool_3:
+    cls: torch.nn.MaxPool2d
+    config:
+      kernel_size: 3
+      stride: 2
+      padding: 1
+    inp_src:
+      - inception_3b
+  inception_4a:
+    cls: ComposableModel
+    config: config/inception_4a.yaml
+    inp_src:
+      - maxpool_3
+  inception_4b:
+    cls: ComposableModel
+    config: config/inception_4b.yaml
+    inp_src:
+      - inception_4a
+  inception_4c:
+    cls: ComposableModel
+    config: config/inception_4c.yaml
+    inp_src:
+      - inception_4b
+  inception_4d:
+    cls: ComposableModel
+    config: config/inception_4d.yaml
+    inp_src:
+      - inception_4c
+  inception_4e:
+    cls: ComposableModel
+    config: config/inception_4e.yaml
+    inp_src:
+      - inception_4d
+  maxpool_4:
+    cls: torch.nn.MaxPool2d
+    config:
+      kernel_size: 3
+      stride: 2
+      padding: 1
+    inp_src:
+      - inception_4e
+  inception_5a:
+    cls: ComposableModel
+    config: config/inception_5a.yaml
+    inp_src:
+      - maxpool_4
+  inception_5b:
+    cls: ComposableModel
+    config: config/inception_5b.yaml
+    inp_src:
+      - inception_5a
+  avgpool:
+    cls: torch.nn.AdaptiveAvgPool2d
+    config:
+      output_size: 1
+    inp_src:
+      - inception_5b
+  dropout:
+    cls: torch.nn.Dropout
+    config:
+      p: 0.4
+    inp_src:
+      - avgpool
+  flatten:
+    cls: torch.nn.Flatten
+    config:
+      start_dim: 1
+      end_dim: -1
+    inp_src:
+      - dropout
+  linear:
+    cls: torch.nn.Linear
+    config:
+      in_features: 1024
+      out_features: 1000
+    inp_src:
+      - flatten
+  softmax:
+    cls: torch.nn.Softmax
+    config:
+      dim: 1
+    inp_src:
+      - linear
+  auxiliary_classifier_4a:
+    cls: ComposableModel
+    config: config/auxiliary_classifier_4a.yaml
+    inp_src:
+      - inception_4a
+  auxiliary_classifier_4b:
+    cls: ComposableModel
+    config: config/auxiliary_classifier_4b.yaml
+    inp_src:
+      - inception_4d
+  output:
+    - auxiliary_classifier_4a
+    - auxiliary_classifier_4b
+    - softmax
+
+  

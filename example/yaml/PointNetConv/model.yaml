@@ -1,0 +1,42 @@
+name: point_net_conv
+description: |
+  A simple model consisting of two PointNetConv layers followed by a ReLU 
+  activation and a global max pooling layer.
+modules:
+  input:
+    - pos
+    - edge_index
+    - batch
+  
+  point_net_conv_1:
+    inp_src:
+      - pos
+      - pos
+      - edge_index
+  
+  relu_1:
+    inp_src:
+      - point_net_conv_1
+  
+  point_net_conv_2:
+    inp_src:
+      - relu_1
+      - pos
+      - edge_index
+
+  relu_2:
+    inp_src:
+      - point_net_conv_2
+
+  global_max_pool:
+    inp_src:
+      - relu_2
+      - batch
+
+  classifier:
+    inp_src:
+      - global_max_pool
+  
+  output:
+    - classifier
+  

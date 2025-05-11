@@ -1,0 +1,65 @@
+name: auxiliary_classifier_4b
+hyper_params:
+  in_channels: 528
+  num_classes: 1000
+modules:
+  input:
+    - x
+  avgpool:
+    cls: torch.nn.AvgPool2d
+    config:
+      kernel_size: 5
+      stride: 3
+      padding: 0
+    inp_src:
+      - x
+  conv1x1:
+    cls: Conv2d
+    config:
+      in_channels: ${hyper_params.in_channels}
+      out_channels: 128
+      kernel_size: 1
+      stride: 1
+      padding: 0
+    inp_src:
+      - avgpool
+  flatten:
+    cls: torch.nn.Flatten
+    config:
+      start_dim: 1
+      end_dim: -1
+    inp_src:
+      - conv1x1
+  linear:
+    cls: torch.nn.Linear
+    config:
+      in_features: 2048
+      out_features: 1024
+    inp_src:
+      - flatten
+  relu:
+    cls: torch.nn.ReLU
+    config: {}
+    inp_src:
+      - linear
+  dropout:
+    cls: torch.nn.Dropout
+    config:
+      p: 0.7
+    inp_src:
+      - relu
+  linear_2:
+    cls: torch.nn.Linear
+    config:
+      in_features: 1024
+      out_features: ${hyper_params.num_classes}
+    inp_src:
+      - dropout
+  softmax:
+    cls: torch.nn.Softmax
+    config:
+      dim: 1
+    inp_src:
+      - linear_2
+  output:
+    - softmax

@@ -1,0 +1,34 @@
+name: toy_example
+description: |
+  A simple model showcasing the main idea of the YAML format for ComposableModel.
+  It consists of two modules, each with a different number of 
+  outputs. The first module has two outputs, and the second module has one 
+  output. The final output is a combination of the outputs from both modules.
+modules:
+  input:
+    - x
+
+  module_1:
+    cls: module_type_1
+    inp_src:
+      - x
+    config:
+      param1: 42
+      param2: "42"
+    out_num: 2
+
+  module_2:
+    cls: module_type_2
+    inp_src:
+      - module_1.0
+      - x
+    config: module_2.yaml
+  
+  module_3:
+    cls: module_type_3
+    inp_src:
+      - module_2
+
+  output:
+    - module_1.1
+    - module_3

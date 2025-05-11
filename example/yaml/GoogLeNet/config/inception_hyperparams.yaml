@@ -1,0 +1,80 @@
+inception_3a:
+  in_channels: 192
+  n_filter_conv1x1: 64
+  n_filter_3x3reduce: 96
+  n_filter_3x3: 128
+  n_filter_5x5reduce: 16
+  n_filter_5x5: 32
+  n_filter_pool_proj: 32
+
+inception_3b:
+  in_channels: 256
+  n_filter_conv1x1: 128
+  n_filter_3x3reduce: 128
+  n_filter_3x3: 192
+  n_filter_5x5reduce: 32
+  n_filter_5x5: 96
+  n_filter_pool_proj: 64
+
+inception_4a:
+  in_channels: 480
+  n_filter_conv1x1: 192
+  n_filter_3x3reduce: 96
+  n_filter_3x3: 208
+  n_filter_5x5reduce: 16
+  n_filter_5x5: 48
+  n_filter_pool_proj: 64
+
+inception_4b:
+  in_channels: 512
+  n_filter_conv1x1: 160
+  n_filter_3x3reduce: 112
+  n_filter_3x3: 224
+  n_filter_5x5reduce: 24
+  n_filter_5x5: 64
+  n_filter_pool_proj: 64
+
+inception_4c:
+  in_channels: 512
+  n_filter_conv1x1: 128
+  n_filter_3x3reduce: 128
+  n_filter_3x3: 256
+  n_filter_5x5reduce: 24
+  n_filter_5x5: 64
+  n_filter_pool_proj: 64
+
+inception_4d:
+  in_channels: 512
+  n_filter_conv1x1: 112
+  n_filter_3x3reduce: 144
+  n_filter_3x3: 288
+  n_filter_5x5reduce: 32
+  n_filter_5x5: 64
+  n_filter_pool_proj: 64
+
+inception_4e:
+  in_channels: 528
+  n_filter_conv1x1: 256
+  n_filter_3x3reduce: 160
+  n_filter_3x3: 320
+  n_filter_5x5reduce: 32
+  n_filter_5x5: 128
+  n_filter_pool_proj: 128
+
+inception_5a:
+  in_channels: 832
+  n_filter_conv1x1: 256
+  n_filter_3x3reduce: 160
+  n_filter_3x3: 320
+  n_filter_5x5reduce: 32
+  n_filter_5x5: 128
+  n_filter_pool_proj: 128
+
+inception_5b:
+  in_channels: 832
+  n_filter_conv1x1: 384
+  n_filter_3x3reduce: 192
+  n_filter_3x3: 384
+  n_filter_5x5reduce: 48
+  n_filter_5x5: 128
+  n_filter_pool_proj: 128

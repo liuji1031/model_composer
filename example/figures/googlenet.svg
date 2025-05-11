@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+  <svg xmlns="http://www.w3.org/2000/svg" width="640" height="2270" viewBox="0 0 640 2270">
+    <defs>
+      <!-- Define marker for arrow heads -->
+      <marker id="arrowhead" markerWidth="6" markerHeight="8" refX="0" refY="4" orient="auto">
+        <polygon points="0 0, 6 4, 0 8" fill="#555" />
+      </marker>
+    </defs>
+    <rect x="0" y="0" width="640" height="2270" fill="white"/>
+    <g class="edges">
+      <path d="M305,950 C305,1150 75,1886 75,2086" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M420,1250 C420,1450 305,1886 305,2086" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M535,1650 C535,1682.4 535,1653.6 535,1686" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M305,40 C305,81.4 305,44.6 305,86" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M305,350 C305,382.4 305,353.6 305,386" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M305,250 C305,282.4 305,253.6 305,286" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M535,1750 C535,1782.4 535,1753.6 535,1786" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M535,1850 C535,1882.4 535,1853.6 535,1886" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M305,550 C305,582.4 305,553.6 305,586" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M305,650 C305,682.4 305,653.6 305,686" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M305,850 C305,882.4 305,853.6 305,886" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M305,950 C305,982.4 420,953.6 420,986" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M420,1050 C420,1082.4 420,1053.6 420,1086" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M420,1150 C420,1182.4 420,1153.6 420,1186" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M420,1250 C420,1282.4 535,1253.6 535,1286" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M535,1450 C535,1482.4 535,1453.6 535,1486" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M535,1550 C535,1582.4 535,1553.6 535,1586" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M535,1950 C535,1982.4 535,1953.6 535,1986" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M305,150 C305,182.4 305,153.6 305,186" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M305,450 C305,482.4 305,453.6 305,486" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M305,750 C305,782.4 305,753.6 305,786" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M535,1350 C535,1382.4 535,1353.6 535,1386" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M75,2150 C75,2182.4 250,2153.6 250,2186" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M305,2150 C305,2182.4 317.5,2153.6 317.5,2186" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M535,2150 C535,2182.4 385,2153.6 385,2186" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M535,2050 C535,2082.4 535,2053.6 535,2086" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    </g>
+    <g class="nodes">
+      <g transform="translate(0,2100)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(270, 60%, 75%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">auxiliary_classifier_4a</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">ComposableModel</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(230,2100)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(269, 59%, 84%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">auxiliary_classifier_4b</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">ComposableModel</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(460,1700)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(310, 60%, 75%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">avgpool</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">torch.nn.AdaptiveAvgPool2d</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(230,100)">
+        <rect width="150" height="50" rx="5" ry="5" fill="#b3d0ff" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">convolution_1</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">Conv2d</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(230,400)">
+        <rect width="150" height="50" rx="5" ry="5" fill="#b3d0ff" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">convolution_2</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">Conv2d</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(230,300)">
+        <rect width="150" height="50" rx="5" ry="5" fill="#b3d0ff" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">convolution_2_reduce</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">Conv2d</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(460,1800)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(219, 69%, 84%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">dropout</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">torch.nn.Dropout</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(460,1900)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(128, 58%, 83%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">flatten</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">torch.nn.Flatten</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(230,600)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(152, 62%, 77%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">inception_3a</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">ComposableModel</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(230,700)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(153, 63%, 78%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">inception_3b</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">ComposableModel</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(230,900)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(183, 53%, 78%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">inception_4a</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">ComposableModel</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(345,1000)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(184, 54%, 79%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">inception_4b</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">ComposableModel</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(345,1100)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(185, 55%, 80%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">inception_4c</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">ComposableModel</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(345,1200)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(186, 56%, 81%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">inception_4d</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">ComposableModel</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(460,1300)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(187, 57%, 82%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">inception_4e</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">ComposableModel</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(460,1500)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(214, 64%, 79%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">inception_5a</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">ComposableModel</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(460,1600)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(215, 65%, 80%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">inception_5b</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">ComposableModel</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(230,0)">
+        <rect width="150" height="40" rx="5" ry="5" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+        <text x="75" y="20" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">input</text>
+        
+        
+        <circle cx="75" cy="40" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(460,2000)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(31, 61%, 76%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">linear</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">torch.nn.Linear</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(230,200)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(38, 68%, 83%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">maxpool_1</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">torch.nn.MaxPool2d</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(230,500)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(38, 68%, 83%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">maxpool_2</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">torch.nn.MaxPool2d</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(230,800)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(38, 68%, 83%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">maxpool_3</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">torch.nn.MaxPool2d</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(460,1400)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(38, 68%, 83%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">maxpool_4</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">torch.nn.MaxPool2d</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(230,2200)">
+        <rect width="175" height="40" rx="5" ry="5" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+        <text x="87.5" y="20" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">output</text>
+        
+        <circle cx="20" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" /><circle cx="87.5" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" /><circle cx="155" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        
+      </g>
+    <g transform="translate(460,2100)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(70, 60%, 75%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">softmax</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">torch.nn.Softmax</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    </g>
+  </svg>

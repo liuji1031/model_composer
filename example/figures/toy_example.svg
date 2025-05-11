@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+  <svg xmlns="http://www.w3.org/2000/svg" width="319" height="470" viewBox="0 0 319 470">
+    <defs>
+      <!-- Define marker for arrow heads -->
+      <marker id="arrowhead" markerWidth="6" markerHeight="8" refX="0" refY="4" orient="auto">
+        <polygon points="0 0, 6 4, 0 8" fill="#555" />
+      </marker>
+    </defs>
+    <rect x="0" y="0" width="319" height="470" fill="white"/>
+    <g class="edges">
+      <path d="M137.5,40 C137.5,81.4 75,44.6 75,86" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M20,150 C20,186 159,154 159,190" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M137.5,40 C137.5,175 269,55 269,190" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M214,254 C214,284 214,254 214,284" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M130,150 C130,350 82.5,186 82.5,386" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M214,348 C214,382.2 192.5,351.8 192.5,386" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    </g>
+    <g class="nodes">
+      <g transform="translate(62.5,0)">
+        <rect width="150" height="40" rx="5" ry="5" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+        <text x="75" y="20" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">input</text>
+        
+        
+        <circle cx="75" cy="40" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(0,100)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(89, 59%, 84%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">module_1</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">module_type_1</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="20" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" /><circle cx="130" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(139,204)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(88, 58%, 83%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">module_2</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">module_type_2</text>
+        <circle cx="20" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" /><circle cx="130" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(139,298)">
+        <rect width="150" height="50" rx="5" ry="5" fill="hsl(87, 57%, 82%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="21" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">module_3</text>
+        <text x="75" y="35" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10px" fill="#000">module_type_3</text>
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="50" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(62.5,400)">
+        <rect width="150" height="40" rx="5" ry="5" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+        <text x="75" y="20" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">output</text>
+        
+        <circle cx="20" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" /><circle cx="130" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        
+      </g>
+    </g>
+  </svg>

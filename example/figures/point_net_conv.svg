@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+  <svg xmlns="http://www.w3.org/2000/svg" width="300" height="740" viewBox="0 0 300 740">
+    <defs>
+      <!-- Define marker for arrow heads -->
+      <marker id="arrowhead" markerWidth="6" markerHeight="8" refX="0" refY="4" orient="auto">
+        <polygon points="0 0, 6 4, 0 8" fill="#555" />
+      </marker>
+    </defs>
+    <rect x="0" y="0" width="300" height="740" fill="white"/>
+    <g class="edges">
+      <path d="M200,540 C200,581.4 200,544.6 200,586" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M137.5,440 C137.5,481.4 145,444.6 145,486" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M280,40 C280,240 255,286 255,486" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M200,640 C200,681.4 200,644.6 200,686" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M145,40 C145,81.4 20,44.6 20,86" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M145,40 C145,81.4 87.5,44.6 87.5,86" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M212.5,40 C212.5,81.4 155,44.6 155,86" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M75,240 C75,281.4 96.30353200883002,244.6 96.30353200883002,286" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M145,40 C145,240 163.80353200883002,86 163.80353200883002,286" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M212.5,40 C212.5,240 231.30353200883002,86 231.30353200883002,286" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M87.5,140 C87.5,181.4 75,144.6 75,186" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M163.80353200883002,340 C163.80353200883002,381.4 137.5,344.6 137.5,386" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+    </g>
+    <g class="edge-labels">
+      
+            <g>
+              <rect x="147.5" y="561" width="105" height="18" rx="6" ry="6"
+                fill="white" stroke="#c9c9c9" stroke-width="0.5"/>
+              <text x="200" y="571" text-anchor="middle" dominant-baseline="middle"
+                font-family="Arial, sans-serif" font-size="10px" fill="#000" font-weight="500">global_max_pool</text>
+            </g>
+          
+    
+            <g>
+              <rect x="123.86367999999999" y="461" width="42" height="18" rx="6" ry="6"
+                fill="white" stroke="#c9c9c9" stroke-width="0.5"/>
+              <text x="144.86368" y="471" text-anchor="middle" dominant-baseline="middle"
+                font-family="Arial, sans-serif" font-size="10px" fill="#000" font-weight="500">relu_2</text>
+            </g>
+          
+    
+            <g>
+              <rect x="237.9544" y="461" width="35" height="18" rx="6" ry="6"
+                fill="white" stroke="#c9c9c9" stroke-width="0.5"/>
+              <text x="255.4544" y="471" text-anchor="middle" dominant-baseline="middle"
+                font-family="Arial, sans-serif" font-size="10px" fill="#000" font-weight="500">batch</text>
+            </g>
+          
+    
+            <g>
+              <rect x="165" y="661" width="70" height="18" rx="6" ry="6"
+                fill="white" stroke="#c9c9c9" stroke-width="0.5"/>
+              <text x="200" y="671" text-anchor="middle" dominant-baseline="middle"
+                font-family="Arial, sans-serif" font-size="10px" fill="#000" font-weight="500">classifier</text>
+            </g>
+          
+    
+            <g>
+              <rect x="11.771999999999995" y="61" width="21" height="18" rx="6" ry="6"
+                fill="white" stroke="#c9c9c9" stroke-width="0.5"/>
+              <text x="22.271999999999995" y="71" text-anchor="middle" dominant-baseline="middle"
+                font-family="Arial, sans-serif" font-size="10px" fill="#000" font-weight="500">pos</text>
+            </g>
+          
+    
+            <g>
+              <rect x="78.04511999999998" y="61" width="21" height="18" rx="6" ry="6"
+                fill="white" stroke="#c9c9c9" stroke-width="0.5"/>
+              <text x="88.54511999999998" y="71" text-anchor="middle" dominant-baseline="middle"
+                font-family="Arial, sans-serif" font-size="10px" fill="#000" font-weight="500">pos</text>
+            </g>
+          
+    
+            <g>
+              <rect x="121.04512" y="61" width="70" height="18" rx="6" ry="6"
+                fill="white" stroke="#c9c9c9" stroke-width="0.5"/>
+              <text x="156.04512" y="71" text-anchor="middle" dominant-baseline="middle"
+                font-family="Arial, sans-serif" font-size="10px" fill="#000" font-weight="500">edge_index</text>
+            </g>
+          
+    
+            <g>
+              <rect x="74.91631901103752" y="261" width="42" height="18" rx="6" ry="6"
+                fill="white" stroke="#c9c9c9" stroke-width="0.5"/>
+              <text x="95.91631901103752" y="271" text-anchor="middle" dominant-baseline="middle"
+                font-family="Arial, sans-serif" font-size="10px" fill="#000" font-weight="500">relu_1</text>
+            </g>
+          
+    
+            <g>
+              <rect x="152.96175901103751" y="261" width="21" height="18" rx="6" ry="6"
+                fill="white" stroke="#c9c9c9" stroke-width="0.5"/>
+              <text x="163.46175901103751" y="271" text-anchor="middle" dominant-baseline="middle"
+                font-family="Arial, sans-serif" font-size="10px" fill="#000" font-weight="500">pos</text>
+            </g>
+          
+    
+            <g>
+              <rect x="195.9617590110375" y="261" width="70" height="18" rx="6" ry="6"
+                fill="white" stroke="#c9c9c9" stroke-width="0.5"/>
+              <text x="230.9617590110375" y="271" text-anchor="middle" dominant-baseline="middle"
+                font-family="Arial, sans-serif" font-size="10px" fill="#000" font-weight="500">edge_index</text>
+            </g>
+          
+    
+            <g>
+              <rect x="19.227199999999996" y="161" width="112" height="18" rx="6" ry="6"
+                fill="white" stroke="#c9c9c9" stroke-width="0.5"/>
+              <text x="75.2272" y="171" text-anchor="middle" dominant-baseline="middle"
+                font-family="Arial, sans-serif" font-size="10px" fill="#000" font-weight="500">point_net_conv_1</text>
+            </g>
+          
+    
+            <g>
+              <rect x="81.97809299779249" y="361" width="112" height="18" rx="6" ry="6"
+                fill="white" stroke="#c9c9c9" stroke-width="0.5"/>
+              <text x="137.9780929977925" y="371" text-anchor="middle" dominant-baseline="middle"
+                font-family="Arial, sans-serif" font-size="10px" fill="#000" font-weight="500">point_net_conv_2</text>
+            </g>
+          
+    </g>
+    <g class="nodes">
+      <g transform="translate(125,600)">
+        <rect width="150" height="40" rx="5" ry="5" fill="hsl(111, 61%, 76%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="20" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">classifier</text>
+        
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="40" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(125,500)">
+        <rect width="150" height="40" rx="5" ry="5" fill="hsl(275, 65%, 80%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="20" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">global_max_pool</text>
+        
+        <circle cx="20" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" /><circle cx="130" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="40" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(125,0)">
+        <rect width="175" height="40" rx="5" ry="5" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+        <text x="87.5" y="20" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">input</text>
+        
+        
+        <circle cx="20" cy="40" r="4" fill="#555" stroke="white" stroke-width="1" /><circle cx="87.5" cy="40" r="4" fill="#555" stroke="white" stroke-width="1" /><circle cx="155" cy="40" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(125,700)">
+        <rect width="150" height="40" rx="5" ry="5" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+        <text x="75" y="20" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">output</text>
+        
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        
+      </g>
+    <g transform="translate(0,100)">
+        <rect width="175" height="40" rx="5" ry="5" fill="hsl(199, 69%, 84%)" stroke="#949494" stroke-width="1"/>
+        <text x="87.5" y="20" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">point_net_conv_1</text>
+        
+        <circle cx="20" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" /><circle cx="87.5" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" /><circle cx="155" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="87.5" cy="40" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(76.30353200883002,300)">
+        <rect width="175" height="40" rx="5" ry="5" fill="hsl(200, 50%, 75%)" stroke="#949494" stroke-width="1"/>
+        <text x="87.5" y="20" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">point_net_conv_2</text>
+        
+        <circle cx="20" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" /><circle cx="87.5" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" /><circle cx="155" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="87.5" cy="40" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(0,200)">
+        <rect width="150" height="40" rx="5" ry="5" fill="hsl(2, 52%, 77%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="20" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">relu_1</text>
+        
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="40" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    <g transform="translate(62.5,400)">
+        <rect width="150" height="40" rx="5" ry="5" fill="hsl(1, 51%, 76%)" stroke="#949494" stroke-width="1"/>
+        <text x="75" y="20" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" fill="#000">relu_2</text>
+        
+        <circle cx="75" cy="0" r="4" fill="#555" stroke="white" stroke-width="1" />
+        <circle cx="75" cy="40" r="4" fill="#555" stroke="white" stroke-width="1" />
+      </g>
+    </g>
+  </svg>
