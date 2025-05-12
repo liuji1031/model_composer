@@ -1,0 +1,19 @@
+name: simple_conceptual
+modules:
+  input:
+    - image
+
+  encoder:
+    inp_src:
+      - image
+
+  middle_layers:
+    inp_src:
+      - encoder
+  
+  decoder:
+    inp_src:
+      - middle_layers
+
+  output:
+    - decoder
